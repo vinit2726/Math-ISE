@@ -1,0 +1,19 @@
+import math
+
+# Function
+def f(x):
+    return math.exp(x)
+
+# Given values
+x = 1
+h = 0.1
+
+# Forward Difference
+f_prime = (f(x + h) - f(x)) / h
+
+print("Approximate derivative f'(1):", f_prime)
+
+# Exact derivative for comparison
+exact = math.exp(1)
+print("Exact derivative f'(1):", exact)
+print("Error:", abs(f_prime - exact))
